@@ -1,0 +1,50 @@
+.add-friend{
+    height: 120px;
+    background: #dfc6c6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-friend-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.add-input{
+    width: 120px;
+    text-align: center;
+    height: 25px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.add{
+    height: 28px;
+    margin-top: 20px;
+    width: 200px;
+}
+.add-friend-container{
+    width: 300px;
+    height: 150px;
+    background-color: #f7d4d4;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-btn{
+    height: 28px;
+    margin-top: 20px;
+    width: 200px;
+    background-color: #db9515;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
