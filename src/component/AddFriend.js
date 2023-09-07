@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AddFriend.css"
 function AddFriend({onAdd}){
-    const[friendName, setFriendName]=useState('abdo');
+    const[friendName, setFriendName]=useState('');
     const[friendImage, setFriendImage]=useState('https://picsum.photos/200');
     const[isShow,setIsShow]=useState(false);
     function changeNameHandler(e){
@@ -22,6 +22,8 @@ function AddFriend({onAdd}){
             const newFriend={
                 id:Math.random(), name:friendName, status:`You and ${friendName} are even `, have:0, image:{friendImage}
             }
+            setIsShow(false);
+            setFriendImage('');
             onAdd(newFriend)
 
         }
