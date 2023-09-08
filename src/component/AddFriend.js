@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./AddFriend.css"
 function AddFriend({onAdd}){
     const[friendName, setFriendName]=useState('');
-    const[friendImage, setFriendImage]=useState('https://picsum.photos/200');
+    const[friendImage, setFriendImage]=useState("https://i.pravatar.cc/48");
     const[isShow,setIsShow]=useState(false);
     function changeNameHandler(e){
         setFriendName(e.target.value);
@@ -20,7 +20,7 @@ function AddFriend({onAdd}){
         }
         else {
             const newFriend={
-                id:Math.random(), name:friendName, status:`You and ${friendName} are even `, have:0, image:{friendImage}
+                id:Math.random(), name:friendName, status:`You and ${friendName} are even `, have:0, image:`${friendImage}?=${Math.random()}`
             }
             setIsShow(false);
             setFriendImage('');
@@ -31,7 +31,7 @@ function AddFriend({onAdd}){
 
     return(
     <div className='Add-Friend'>
-        {!isShow &&<button onClick={()=>{
+        {!isShow &&<button style={{width:"100px" ,height:"40px"}} onClick={()=>{
             setIsShow(true);
         }} className="btn">Add Friend</button>}
         {isShow&&<div className="add-friend-container">

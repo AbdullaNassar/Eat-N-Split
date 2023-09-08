@@ -1,3 +1,8 @@
+.Add-Friend{
+    display: flex;
+    justify-content: end;
+    margin-right: 15px
+}
 .add-friend{
     height: 120px;
     background: #dfc6c6;
@@ -7,6 +12,7 @@
     padding: 10px;
     justify-content: center;
     align-items: center;
+    
 }
 
 .add-friend-info{

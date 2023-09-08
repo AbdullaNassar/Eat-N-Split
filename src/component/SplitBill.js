@@ -1,10 +1,12 @@
 import { useState } from "react";
+import "./SplitBill.css"
 function SplitBill({name,onSubmit}){
-  const[bill, setBill]=useState(0);
-  const[myExpense,setMyExpense]=useState(0);
+  const[bill, setBill]=useState(null);
+  const[myExpense,setMyExpense]=useState();
   const[iPay, setIpay]=useState(true);
   const[isShow,setIsShow]=useState(true);
-  const friendExpense= bill-myExpense;
+  let friendExpense;
+   if(bill!==null)friendExpense=bill-myExpense;
   let amount;
   if(iPay)amount=friendExpense;
   else amount=myExpense;
@@ -40,28 +42,28 @@ function SplitBill({name,onSubmit}){
     setIpay(e=>!e);
   }
     return(
-        isShow&&<div>
+        isShow&&<div className="split-container">
       <h3>Split A Bill With {name}</h3>
-      <div>
+      <div className="input">
         <label>Bill Value</label>
-        <input value={bill} onChange={changeBillHandler} type="number" min={1} step={1} />
+        <input className="input-size" value={bill} onChange={changeBillHandler} type="number" min={1} step={1} />
       </div>
-      <div>
+      <div className="input">
         <label>Your Expense</label>
-        <input value={myExpense} onChange={changeMyexpenseHandler} type="number" min={1} step={1} max={bill}/>
+        <input className="input-size" value={myExpense} onChange={changeMyexpenseHandler} type="number" min={1} step={1} max={bill}/>
       </div>
-      <div>
+      <div className="input">
         <label>{name}'s Expense   </label>
-        <label> {bill-myExpense}</label>
+        <input className="input-size" disabled value={friendExpense}/>
       </div>
-      <div>
+      <div className="input">
         <label>Who is paying the bil</label>
-        <select onChange={changePayHandler}>
+        <select className="input-size" onChange={changePayHandler}>
           <option value="my">You</option>
           <option value="friend">{name}</option>
         </select>
       </div>
-      <button type="submit" onClick={onSubmitSplitt}>Split bill</button>
+      <div className="btn-cont"><button className="btn" type="submit" onClick={onSubmitSplitt}>Split bill</button></div>
     </div>
     )
 }

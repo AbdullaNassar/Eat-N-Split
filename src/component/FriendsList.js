@@ -3,9 +3,9 @@ import Friend from "./Friend";
 import AddFriend from "./AddFriend";
 import "./FriendList.css"
 const InitialList=[
-    {id:1 ,name:"Clark", status:"You and clark are even", have:0, image:"https://picsum.photos/200"},
-    {id:2, name:"Sarah", status:"You and Sarah are even", have:0, image:"https://picsum.photos/200"},
-    {id:3, name:"Antony", status:"You and Antony are even", have:0, image:"https://picsum.photos/200"},
+    {id:1 ,name:"Clark", status:"You and clark are even", have:0, image:"https://i.pravatar.cc/48?u=118836"},
+    {id:2, name:"Sarah", status:"You and Sarah are even", have:0, image:"https://i.pravatar.cc/48?u=933372"},
+    {id:3, name:"Antony", status:"You and Antony are even", have:0, image: "https://i.pravatar.cc/48?u=499476"},
 ];
 function FriendsList(){
     const[friendList, setFriendList]=useState(InitialList);

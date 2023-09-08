@@ -1,0 +1,27 @@
+.split-container{
+    background-color: #f7d4d4;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.split-container h3{
+    text-transform: uppercase;
+}
+.split-container .input{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.split-container button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.split-container .btn-cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.input-size{
+    width: 60px;
+    text-align: center;
+}
