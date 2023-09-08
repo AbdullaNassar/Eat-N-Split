@@ -12,6 +12,7 @@ https://github.com/AbdullaNassar/Eat-N-Split/assets/113154901/bb65f035-6c3c-4fb4
 
 
 </br>
+
 ### Installation Instructions: 
 To Run this project locally follow the next steps:
 
